@@ -1,0 +1,12 @@
+.toggle {
+  background: transparent; border: none; cursor: pointer; padding: 8px;
+  border-radius: var(--radius-full); transition: all var(--transition-normal);
+  display: flex; align-items: center; justify-content: center;
+}
+.toggle:hover { background: var(--bg-tertiary); }
+.iconWrap {
+  display: flex; align-items: center; justify-content: center;
+  transition: all var(--transition-normal);
+}
+.dark { color: #FBBF24; }
+.light { color: #F59E0B; transform: rotate(180deg); }

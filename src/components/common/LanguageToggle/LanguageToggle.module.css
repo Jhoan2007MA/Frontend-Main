@@ -1,0 +1,10 @@
+.toggle {
+  display: flex; align-items: center; gap: 2px; padding: 6px 12px;
+  background: var(--bg-tertiary); border: 1px solid var(--border-color);
+  border-radius: var(--radius-full); cursor: pointer; font-family: var(--font-sans);
+  transition: all var(--transition-fast);
+}
+.toggle:hover { border-color: var(--border-color-hover); }
+.option { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); transition: color var(--transition-fast); }
+.active { color: var(--color-primary-light); }
+.divider { font-size: 0.7rem; color: var(--text-muted); }
