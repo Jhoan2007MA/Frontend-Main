@@ -1,27 +1,17 @@
 import React from 'react'
+import { RouterProvider } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
-import { AuthProvider } from './context/AuthContext'
-import { ThemeProvider } from './context/ThemeContext'
-import { LanguageProvider } from './context/LanguageContext'
-import AppRouter from './router/AppRouter'
+import { AuthProvider } from './contexts/AuthContext'
+import { ThemeProvider } from './contexts/ThemeContext'
+import { LanguageProvider } from './contexts/LanguageContext'
+import { router } from './router'
 
-/**
- * App — Root component.
- *
- * Provider hierarchy (outermost → innermost):
- *   LanguageProvider  →  ThemeProvider  →  AuthProvider  →  AppRouter
- *
- * LanguageProvider sits at the top so every child (including auth
- * error messages) can access translated strings.
- */
 export default function App() {
   return (
     <LanguageProvider>
       <ThemeProvider>
         <AuthProvider>
-          <AppRouter />
-
-          {/* Global toast container — dark‑mode styling */}
+          <RouterProvider router={router} />
           <Toaster
             position="top-right"
             toastOptions={{
