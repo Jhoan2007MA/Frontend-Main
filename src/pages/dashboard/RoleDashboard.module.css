@@ -1,0 +1,7 @@
+.page { display: flex; flex-direction: column; gap: 24px; animation: fadeIn 0.4s ease; }
+.greeting { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin: 0; }
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.quickActions { display: flex; gap: 12px; flex-wrap: wrap; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 1024px) { .statsGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .statsGrid { grid-template-columns: 1fr; } }
